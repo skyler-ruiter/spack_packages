@@ -345,7 +345,9 @@ class Libpressio(CMakePackage, CudaPackage):
     depends_on("cusz@0.14.0:", when="@1.0.0:+cusz")
 
     depends_on("cuszp@2.0.1:", when="+cuszp")
-    depends_on("fzgpumodules@2.0:", when="+fzgpumodules")
+    depends_on("fzgpumodules@2.0: +cuda", when="+fzgpumodules+cuda")
+    for _arch in CudaPackage.cuda_arch_values:
+        depends_on(f"fzgpumodules cuda_arch={_arch}", when=f"+fzgpumodules cuda_arch={_arch}")
 
     depends_on("eccodes+shared", when="+grib+shared")
     depends_on("faz", when="+faz")
