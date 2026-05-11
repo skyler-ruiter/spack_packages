@@ -8,9 +8,8 @@ from spack.package import *
 
 
 class Fzgpumodules(CMakePackage, CudaPackage):
-    """FZGPUModules: A GPU-accelerated module library for prediction-based
-    error-bounded lossy compression, providing composable pipeline stages
-    (predictors, encoders, memory management) via a DAG-driven compressor."""
+    """FZGPUModules: GPU-accelerated graph composable compression 
+        pipeline builder for analytical workflows."""
 
     homepage = "https://szcompressor.org/"
     git = "https://github.com/szcompressor/FZModules.git"
