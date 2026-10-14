@@ -1,0 +1,6 @@
+spack:
+  specs:
+  - libpressio@develop-fzgm-support +fzgpumodules +cuda +python ~core cuda_arch=90 ^cuda@12.9.86 ^python@3.14.5 ^py-numpy@2.5.2 ^py-numcodecs@0.16.5 ^swig@4.5.0
+  view: true
+  concretizer:
+    unify: true
