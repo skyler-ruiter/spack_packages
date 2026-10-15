@@ -22,7 +22,7 @@ class Libpressio(CMakePackage, CudaPackage):
     tests_require_compiler = True
     # Reproducible FZGM integration snapshot while upstream support is under review.
     version("develop-fzgm-support", git="https://github.com/skyler-ruiter/libpressio.git",
-            commit="41d44c72114e15ef7868a462bce2893a3c51fb40")
+            commit="b02e867a46d00c30c9c576758eb1a49d3e1d4209")
     version("master", branch="master")
     version("develop", branch="develop")
     version("1.0.6", sha256="689d7295dad7b12b64a7b2d6467fa0b3fe73203a64016d2c651cff19bb65b5ee")
