@@ -20,9 +20,7 @@ class Libpressio(CMakePackage, CudaPackage):
     maintainers("robertu94")
 
     tests_require_compiler = True
-    # Reproducible FZGM integration snapshots while upstream support is under review.
-    version("develop-fzgm-v2", git="https://github.com/skyler-ruiter/libpressio.git",
-            commit="b330cbe7a125fcf79194068b823b51323335b7d7")
+    # Reproducible FZGM integration snapshot while upstream support is under review.
     version("develop-fzgm-support", git="https://github.com/skyler-ruiter/libpressio.git",
             commit="41d44c72114e15ef7868a462bce2893a3c51fb40")
     version("master", branch="master")
@@ -352,11 +350,10 @@ class Libpressio(CMakePackage, CudaPackage):
     depends_on("cuszp@2.0.1:", when="+cuszp")
     conflicts("~cuda", when="+fzgpumodules", msg="FZGPUModules requires CUDA")
     conflicts("+fzgpumodules", when="@0:1.0.6",
-              msg="Use the pinned fzgm-v2 or fzgm-support integration snapshots")
+              msg="Use the develop-fzgm-support integration snapshot")
     conflicts("+fzgpumodules", when="@=master")
     conflicts("+fzgpumodules", when="@=develop")
     depends_on("fzgpumodules +cuda", when="+fzgpumodules")
-    depends_on("fzgpumodules@=2.0.0", when="@develop-fzgm-v2 +fzgpumodules")
     depends_on("fzgpumodules@=2.0.1", when="@develop-fzgm-support +fzgpumodules")
     depends_on("swig@4.2:", when="+fzgpumodules+python", type="build")
     depends_on("py-numcodecs@0.16:", when="+fzgpumodules+python", type="run")
