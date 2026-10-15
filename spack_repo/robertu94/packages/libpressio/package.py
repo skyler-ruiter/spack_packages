@@ -357,7 +357,7 @@ class Libpressio(CMakePackage, CudaPackage):
     conflicts("+fzgpumodules", when="@=develop")
     depends_on("fzgpumodules +cuda", when="+fzgpumodules")
     depends_on("fzgpumodules@=2.0.0", when="@develop-fzgm-v2 +fzgpumodules")
-    depends_on("fzgpumodules@archive-support", when="@develop-fzgm-support +fzgpumodules")
+    depends_on("fzgpumodules@=2.0.1", when="@develop-fzgm-support +fzgpumodules")
     depends_on("swig@4.2:", when="+fzgpumodules+python", type="build")
     depends_on("py-numcodecs@0.16:", when="+fzgpumodules+python", type="run")
     # SWIG's portable typemap macro supports both the two- and three-argument runtimes.

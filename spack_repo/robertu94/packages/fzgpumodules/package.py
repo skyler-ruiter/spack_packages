@@ -18,13 +18,16 @@ class Fzgpumodules(CMakePackage, CudaPackage):
     license("BSD-3-Clause", checked_by="skyler-ruiter")
 
     version(
+        "2.0.1",
+        url="https://github.com/szcompressor/FZGPUModules/archive/refs/tags/v2.0.1.tar.gz",
+        sha256="c18a9a06a0742a66a8345edca8d38b5b3c96633db55861e71a40e8609cea14a8",
+        preferred=True,
+    )
+    version(
         "2.0.0",
         url="https://github.com/szcompressor/FZGPUModules/releases/download/v2.0.0/FZGPUModules-2.0.0-source.tar.gz",
         sha256="fe54bec71b0b83033a3e9653f61898ce2c893ca9cefffc8d6c2d621faab70335",
-        preferred=True,
     )
-    # Stable-main API snapshot required by the independently decodable adapter.
-    version("archive-support", commit="8f73a3988a2e1efd3192850c192f489e253a1a2e")
 
     depends_on("c", type="build")
     depends_on("cxx", type="build")
