@@ -24,7 +24,7 @@ class Libpressio(CMakePackage, CudaPackage):
     version("develop-fzgm-v2", git="https://github.com/skyler-ruiter/libpressio.git",
             commit="b330cbe7a125fcf79194068b823b51323335b7d7")
     version("develop-fzgm-support", git="https://github.com/skyler-ruiter/libpressio.git",
-            commit="d6469b6b3156b91f6609a8249cb49417fb927ff6")
+            commit="41d44c72114e15ef7868a462bce2893a3c51fb40")
     version("master", branch="master")
     version("develop", branch="develop")
     version("1.0.6", sha256="689d7295dad7b12b64a7b2d6467fa0b3fe73203a64016d2c651cff19bb65b5ee")

@@ -23,8 +23,8 @@ class Fzgpumodules(CMakePackage, CudaPackage):
         sha256="fe54bec71b0b83033a3e9653f61898ce2c893ca9cefffc8d6c2d621faab70335",
         preferred=True,
     )
-    # Unreleased SDK API required by the independently decodable libpressio adapter.
-    version("archive-support", commit="781ca0d58fa108914d37fe6b76106002276dbdd3")
+    # Stable-main API snapshot required by the independently decodable adapter.
+    version("archive-support", commit="8f73a3988a2e1efd3192850c192f489e253a1a2e")
 
     depends_on("c", type="build")
     depends_on("cxx", type="build")
